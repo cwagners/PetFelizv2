@@ -1,5 +1,6 @@
 package br.com.tt.petfeliz2.repository;
 
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -7,31 +8,26 @@ import java.util.List;
 @Repository
 public class InformacoesRepository {
 
+    private JdbcTemplate jdbcTemplate;
+    public InformacoesRepository(JdbcTemplate jdbcTemplate){
+        this.jdbcTemplate = jdbcTemplate;
+    }
     public List<String> listarTelefones(){
 
-        List<String> telefones = new ArrayList<>();
-        telefones.add("51 98788888");
-        telefones.add("51 98788833");
-        telefones.add("51 98788765");
+         List<String> telefones = jdbcTemplate.queryForList("select numero from tb_telefones", String.class);
         return telefones;
     }
 
 
     public List<String> listarEnderecos(){
 
-        List<String> enderecos = new ArrayList<>();
-        enderecos.add("rua a 876");
-        enderecos.add("rua c 000");
-        enderecos.add("rua xyz 654");
+        List<String> enderecos = jdbcTemplate.queryForList("select endereco from tb_enderecos", String.class);
         return enderecos;
     }
 
     public List<String> listarHorarios(){
 
-        List<String> horarios = new ArrayList<>();
-        horarios.add("SEG A SAB 08h as 22h");
-        horarios.add("DOMINGO 14h as 20h");
-        horarios.add("FERIADOS 14h as 20h");
+        List<String> horarios = jdbcTemplate.queryForList("select horario from tb_horarios", String.class);
         return horarios;
     }
 }
