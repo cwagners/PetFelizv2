@@ -30,4 +30,16 @@ public class InformacoesRepository {
         List<String> horarios = jdbcTemplate.queryForList("select horario from tb_horarios", String.class);
         return horarios;
     }
+
+    public void cadastrarTelefone(String numero){
+        jdbcTemplate.update("INSERT INTO tb_telefones (numero) VALUES (?)",numero);
+    }
+
+    public void cadastrarEndereco(String logradouro){
+        jdbcTemplate.update("INSERT INTO tb_enderecos (endereco) VALUES (?)", logradouro);
+    }
+
+    public void cadastrarHorario(String hora) {
+        jdbcTemplate.update("INSERT INTO tb_horarios (horario) VALUES (?)", hora);
+    }
 }

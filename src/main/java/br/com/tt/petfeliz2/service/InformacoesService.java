@@ -27,4 +27,15 @@ public class InformacoesService {
     }
 
 
+    public void cadastrarTelefone(String numero) {
+        informacoesRepository.cadastrarTelefone(numero);
+    }
+
+    public void cadastrarEndereco(String logradouro) {
+        informacoesRepository.cadastrarEndereco(logradouro);
+    }
+
+    public void cadastrarHorario(String hora) {
+        informacoesRepository.cadastrarHorario(hora);
+    }
 }

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Telefone</title>
+</head>
+<body>
+  <h1> Pet Feliz</h1>
+  <h2>Administracao do sistema</h2>
+  <h3>Cadastro de novo telefone</h3>
+  <a href="/admin">voltar</a>
+    <form method="post" th:action="@{/admin/action/telefone-cadastrar}">
+       <input type="text" name="numero" id="numero">
+        <input type="submit" value="Cadastrar telefone">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Endereco</title>
+</head>
+<body>
+    <h1> Pet Feliz</h1>
+    <h2>Administracao do sistema</h2>
+    <h3>Cadastro de novo Endereco</h3>
+    <a href="/admin">voltar</a>
+    <form method="post" th:action="@{/admin/action/endereco-cadastrar}">
+        <input type="text" name="endereco" id="endereco">
+        <input type="submit" value="Cadastrar endereco">
+    </form>
+</body>
+</html>
