@@ -1,8 +1,8 @@
 package br.com.tt.petfeliz2.controller;
 
-import br.com.tt.petfeliz2.controller.dto.EnderecoCriacaoRequest;
-import br.com.tt.petfeliz2.controller.dto.HorarioCriacaoRequest;
-import br.com.tt.petfeliz2.controller.dto.TelefoneCriacaoRequest;
+import br.com.tt.petfeliz2.controller.request.EnderecoCriacaoRequest;
+import br.com.tt.petfeliz2.controller.request.HorarioCriacaoRequest;
+import br.com.tt.petfeliz2.controller.request.TelefoneCriacaoRequest;
 import br.com.tt.petfeliz2.service.InformacoesService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

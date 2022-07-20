@@ -1,4 +1,4 @@
-package br.com.tt.petfeliz2.controller.dto;
+package br.com.tt.petfeliz2.controller.request;
 
 public class HorarioCriacaoRequest {
     private String hora;
