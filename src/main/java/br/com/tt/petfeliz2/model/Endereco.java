@@ -7,24 +7,32 @@ import javax.persistence.*;
 public class Endereco {
 
     Endereco() {} // Construtor com visibilidade "default" para o Hibernate conseguir usar essa entidade
-
-    public Endereco(Long id, String endereco) {
+    public Endereco(Long id, String logradouro, Integer numero) {
         this.id = id;
-        this.endereco = endereco;
+        this.logradouro = logradouro;
+        this.numero = numero;
     }
+
     @Id
-    @Column(name ="id")
+    @Column(name = "id")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name ="endereco")
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    private String endereco;
+    @Column(name ="logradouro")
+    private String logradouro;
+
+    @Column(name = "numero")
+    private Integer numero;
 
     public Long getId() {
         return id;
     }
 
-    public String getEndereco() {
-        return endereco;
+    public String getLogradouro() {
+        return logradouro;
+    }
+
+    public Integer getNumero(){
+        return numero;
     }
 }

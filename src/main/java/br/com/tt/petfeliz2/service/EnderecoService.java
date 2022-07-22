@@ -17,4 +17,8 @@ public class EnderecoService {
         List<Endereco> enderecos = enderecoRepository.findAll();
         return enderecos;
     }
+
+    public void criarEndereco(Endereco endereco) {
+        enderecoRepository.save(endereco);
+    }
 }
