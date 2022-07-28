@@ -2,6 +2,7 @@ package br.com.tt.petfeliz2.controller;
 
 import br.com.tt.petfeliz2.service.InformacoesService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,19 +16,19 @@ public class InformacoesController {
     public InformacoesController(InformacoesService informacoesService){
         this.informacoesService = informacoesService;
     }
-    @RequestMapping("/telefones")
+    @GetMapping("/telefones")
     public List<String> listarTelefones(){
 
         return informacoesService.listarTelefones();
     }
 
-    @RequestMapping("/enderecos")
+    @GetMapping("/enderecos")
     public List<String> listarEnderecos(){
 
         return informacoesService.listarEnderecos();
     }
 
-    @RequestMapping("/horarios")
+    @GetMapping("/horarios")
     public List<String> listarHorarios(){
 
         return informacoesService.listarHorarios();
