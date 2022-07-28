@@ -31,6 +31,6 @@ public class CuidadorController {
 
         Cuidador cuidador = cuidadorService.criar(cuidadorDto);
         Long id = cuidador.getId();
-        return ResponseEntity.created(URI.create("/api/cuidador"+id)).build();
+        return ResponseEntity.created(URI.create("/api/cuidador/"+id)).build();
     }
 }

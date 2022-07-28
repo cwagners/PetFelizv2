@@ -8,7 +8,7 @@ import java.util.List;
 public class Tutor {
     Tutor(){}
 
-    public Tutor(Long id, String nome, String telefone, String cidade, Estado estado, TipoSituacao situacao, List<Adocao> adocoes) {
+    public Tutor(Long id, String nome, String telefone, String cidade, String tutorDtoCidade, Estado estado, TipoSituacao situacao, List<Adocao> adocoes) {
         this.id = id;
         this.nome = nome;
         this.telefone = telefone;
